@@ -5,8 +5,8 @@ using UnityEngine.EventSystems;
 
 public class SpriteScript : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
-    public static GameObject DraggedInstance;
-    public static bool isDragged;
+    //public static GameObject DraggedInstance;
+    //public static bool isDragged;
 
     Vector3 _startPosition;
     Vector3 _offsetToMouse;
@@ -21,13 +21,21 @@ public class SpriteScript : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
 
     public void OnBeginDrag(PointerEventData eventData)
     {
-        if (Input.touchCount > 1)
-            return;
+        //if (Input.touchCount != 1)
+        //    return;
+
+        GetComponent<Rigidbody2D>().simulated = false;
+
+        //foreach (Collider2D c in GetComponents<Collider2D>())
+        //{
+        //    Debug.Log("trigger to move");
+        //    //c.isTrigger = true;
+        //}
 
         foreach (Touch touch in Input.touches)
         {
-            DraggedInstance = gameObject;
-            isDragged = true;
+            //DraggedInstance = gameObject;
+            //isDragged = true;
 
             _startPosition = transform.position;
             //_zDistanceToCamera = Mathf.Abs(_startPosition.z - Camera.main.transform.position.z);
@@ -40,8 +48,8 @@ public class SpriteScript : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
 
     public void OnDrag(PointerEventData eventData)
     {
-        if (Input.touchCount > 1)
-            return;
+        //if (Input.touchCount != 1)
+        //    return;
 
         foreach (Touch touch in Input.touches)
         {
@@ -60,7 +68,18 @@ public class SpriteScript : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
 
     public void OnEndDrag(PointerEventData eventData)
     {
-        isDragged = false;
+        //if (Input.touchCount != 1)
+        //    return;
+
+        GetComponent<Rigidbody2D>().simulated = true;
+
+        //foreach (Collider2D c in GetComponents<Collider2D>())
+        //{
+        //    Debug.Log("trigger to move");
+        //    //c.isTrigger = false;
+        //}
+
+        //isDragged = false;
         //DraggedInstance = null;
         _offsetToMouse = Vector3.zero;
     }
@@ -79,8 +98,8 @@ public class SpriteScript : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
 
     void OnMouseDrag()
     {
-        DraggedInstance = gameObject;
-        isDragged = true;
+        //DraggedInstance = gameObject;
+        //isDragged = true;
 
         transform.position = Camera.main.ScreenToWorldPoint(
               new Vector3(Input.mousePosition.x, Input.mousePosition.y, 0)
@@ -89,7 +108,7 @@ public class SpriteScript : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
 
     void onMouseUp()
     {
-        isDragged = false;
+        //isDragged = false;
         //DraggedInstance = null;
         _offsetToMouse = Vector3.zero;
     }
