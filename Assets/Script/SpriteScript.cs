@@ -21,6 +21,8 @@ public class SpriteScript : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
 
     public void OnBeginDrag(PointerEventData eventData)
     {
+        transform.localEulerAngles = new Vector3(0, 0, 0);
+
         //if (Input.touchCount != 1)
         //    return;
 
@@ -88,6 +90,8 @@ public class SpriteScript : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
 
     void OnMouseDown()
     {
+        transform.localEulerAngles = new Vector3(0, 0, 0);
+
         _startPosition = transform.position;
         //_zDistanceToCamera = Mathf.Abs(_startPosition.z - Camera.main.transform.position.z);
 

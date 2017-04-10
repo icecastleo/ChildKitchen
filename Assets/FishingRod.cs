@@ -90,7 +90,9 @@ public class FishingRod : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDr
             if(find.enabled == true)
             {
                 GameObject fish = Instantiate(fishes[Random.Range(0, fishes.Length)], transform.position, Quaternion.identity);
-                fish.GetComponent<Rigidbody2D>().AddForce(new Vector2(transform.position.x - _startPosition.x, transform.position.y - _startPosition.y));
+                Rigidbody2D rigid = fish.GetComponent<Rigidbody2D>();
+
+                rigid.AddForce(new Vector2(Random.Range(-5.0F, 3.0F), Random.Range(3.0F, 10.0F)) * rigid.mass * 30);
             }
         }
 
@@ -116,5 +118,6 @@ public class FishingRod : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDr
     void onMouseUp()
     {
         _offsetToMouse = Vector3.zero;
+        transform.position = _startPosition;
     }
 }
