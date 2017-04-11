@@ -6,6 +6,7 @@ using UnityEngine.Assertions;
 public class StorageScript : MonoBehaviour {
 
     public Collider2D parent;
+	public ArrayList things = new ArrayList();
 
 	// Use this for initialization
 	void Start () {
@@ -24,7 +25,9 @@ public class StorageScript : MonoBehaviour {
         //Debug.Log("Trigger with " + other.transform.name.Split(null)[0]);
 
         Physics2D.IgnoreCollision(parent, other);
+		things.Add (other.gameObject);
 
+		Debug.Log (things.Count);
         //other.over
 
         //other.transform.position = other.collider2D.
@@ -36,5 +39,8 @@ public class StorageScript : MonoBehaviour {
         //Debug.Log("Untrigger with " + other.transform.name.Split(null)[0]);
 
         Physics2D.IgnoreCollision(parent, other, false);
+		things.Remove (other.gameObject);
+
+		Debug.Log (things.Count);
     }
 }

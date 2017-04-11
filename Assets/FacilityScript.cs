@@ -45,9 +45,6 @@ public class FacilityScript : MonoBehaviour {
 
 		points.Add(new Pair("tank", "puffer fish"), 2);
         points.Add(new Pair("tank", "salmon"), 2);
-
-		//points.Add(new Pair("window", "puffer fish"), 3);
-		//points.Add(new Pair("window", "salmon"), 3);
     }
 
     // Update is called once per frame
