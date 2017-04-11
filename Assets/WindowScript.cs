@@ -17,17 +17,15 @@ public class WindowScript : MonoBehaviour, IPointerClickHandler
 		
 	}
 
-    public void OnPointerClick(PointerEventData eventData)
-    {
-        //Debug.Log("click");
+	public void OnPointerClick(PointerEventData eventData)
+	{
+		//Debug.Log("click");
 
-        GameObject rod = transform.FindChild("FishingRod").gameObject;
+		GameObject rod = transform.FindChild("FishingRod").gameObject;
 
-        Debug.Log(rod);
-
-        if(rod.activeSelf == false)
-        {
-            rod.SetActive(true);
-        }
-    }
+		if(rod.activeSelf == false)
+		{
+			rod.SetActive(true);
+		}
+	}
 }

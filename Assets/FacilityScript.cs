@@ -21,20 +21,33 @@ public class FacilityScript : MonoBehaviour {
     void Start () {
         points = new Dictionary<Pair, float>();
 
-        points.Add(new Pair("TrashCan", "trash0"), 2);
+        points.Add(new Pair("TrashCan", "trash0"), 3);
         points.Add(new Pair("TrashCan", "trash2"), 4);
         points.Add(new Pair("pot", "puffer fish"), 3);
         points.Add(new Pair("pot", "salmon"), 3);
-        points.Add(new Pair("drawer1", "puffer fish"), 2);
-        points.Add(new Pair("drawer1", "salmon"), 2);
-        points.Add(new Pair("drawer2", "puffer fish"), 2);
-        points.Add(new Pair("drawer2", "salmon"), 2);
-        points.Add(new Pair("drawer3", "puffer fish"), 2);
-        points.Add(new Pair("drawer3", "salmon"), 2);
-        points.Add(new Pair("drawer4", "puffer fish"), 2);
-        points.Add(new Pair("drawer4", "salmon"), 2);
-        points.Add(new Pair("tank", "puffer fish"), 1);
-        points.Add(new Pair("tank", "salmon"), 1);
+
+	    points.Add(new Pair("drawer1", "puffer fish"), 0);
+        points.Add(new Pair("drawer1", "salmon"), 0);
+		points.Add(new Pair("drawer1", "trash0"), 0);
+		points.Add(new Pair("drawer1", "trash2"), 0);
+        points.Add(new Pair("drawer2", "puffer fish"), 0);
+        points.Add(new Pair("drawer2", "salmon"), 0);
+		points.Add(new Pair("drawer2", "trash0"), 0);
+		points.Add(new Pair("drawer2", "trash2"), 0);
+        points.Add(new Pair("drawer3", "puffer fish"), 0);
+        points.Add(new Pair("drawer3", "salmon"), 0);
+		points.Add(new Pair("drawer3", "trash0"), 0);
+		points.Add(new Pair("drawer3", "trash2"), 0);
+        points.Add(new Pair("drawer4", "puffer fish"), 0);
+        points.Add(new Pair("drawer4", "salmon"), 0);
+		points.Add(new Pair("drawer4", "trash0"), 0);
+		points.Add(new Pair("drawer4", "trash2"), 0);
+
+		points.Add(new Pair("tank", "puffer fish"), 2);
+        points.Add(new Pair("tank", "salmon"), 2);
+
+		//points.Add(new Pair("window", "puffer fish"), 3);
+		//points.Add(new Pair("window", "salmon"), 3);
     }
 
     // Update is called once per frame

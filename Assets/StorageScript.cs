@@ -19,9 +19,9 @@ public class StorageScript : MonoBehaviour {
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        Assert.IsNotNull(parent);
+        //Assert.IsNotNull(parent);
 
-        Debug.Log("Trigger with " + other.transform.name.Split(null)[0]);
+        //Debug.Log("Trigger with " + other.transform.name.Split(null)[0]);
 
         Physics2D.IgnoreCollision(parent, other);
 
@@ -33,7 +33,7 @@ public class StorageScript : MonoBehaviour {
 
     void OnTriggerExit2D(Collider2D other)
     {
-        Debug.Log("Untrigger with " + other.transform.name.Split(null)[0]);
+        //Debug.Log("Untrigger with " + other.transform.name.Split(null)[0]);
 
         Physics2D.IgnoreCollision(parent, other, false);
     }

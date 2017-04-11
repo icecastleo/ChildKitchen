@@ -1,7 +1,7 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2015
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jam8-Kids-Game-", "Jam8-Kids-Game-.csproj", "{041630FD-A8CE-C4EE-1F36-DD8156D876DF}"
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Jam8-Kids-Game-", "Assembly-CSharp.csproj", "{93908EBF-9644-CE8A-A363-135F4A8E3D45}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -9,12 +9,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{041630FD-A8CE-C4EE-1F36-DD8156D876DF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{041630FD-A8CE-C4EE-1F36-DD8156D876DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{041630FD-A8CE-C4EE-1F36-DD8156D876DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{041630FD-A8CE-C4EE-1F36-DD8156D876DF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{93908EBF-9644-CE8A-A363-135F4A8E3D45}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{93908EBF-9644-CE8A-A363-135F4A8E3D45}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{93908EBF-9644-CE8A-A363-135F4A8E3D45}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{93908EBF-9644-CE8A-A363-135F4A8E3D45}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = Assembly-CSharp.csproj
 	EndGlobalSection
 EndGlobal
