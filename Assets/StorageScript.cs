@@ -7,9 +7,10 @@ public class StorageScript : MonoBehaviour {
 
     public Collider2D parent;
 	public ArrayList things = new ArrayList();
+    public SoundManager sm;
 
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start () {
 		
 	}
 	
@@ -23,6 +24,8 @@ public class StorageScript : MonoBehaviour {
         //Assert.IsNotNull(parent);
 
         //Debug.Log("Trigger with " + other.transform.name.Split(null)[0]);
+
+        sm.PlayStore();
 
         Physics2D.IgnoreCollision(parent, other);
 		things.Add (other.gameObject);

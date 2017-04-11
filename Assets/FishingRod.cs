@@ -17,6 +17,7 @@ public class FishingRod : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDr
     SpriteRenderer find;
 
     public GameObject[] fishes;
+    public SoundManager sm;
 
     // Use this for initialization
     void Start () {
@@ -119,5 +120,6 @@ public class FishingRod : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDr
     {
         _offsetToMouse = Vector3.zero;
         transform.position = _startPosition;
+        sm.PlaySplash();
     }
 }

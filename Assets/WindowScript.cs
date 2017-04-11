@@ -6,9 +6,10 @@ using UnityEngine.EventSystems;
 
 public class WindowScript : MonoBehaviour, IPointerClickHandler
 {
+    public SoundManager sm;
 
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start () {
 		
 	}
 	
@@ -26,6 +27,7 @@ public class WindowScript : MonoBehaviour, IPointerClickHandler
 		if(rod.activeSelf == false)
 		{
 			rod.SetActive(true);
+            sm.PlayRodSplash();
 		}
 	}
 }

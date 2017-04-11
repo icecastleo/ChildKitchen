@@ -109,6 +109,31 @@ public class SoundManager : MonoBehaviour {
         sound.PlayOneShot(audClips[14], .5f);
 
     }
+
+
+    public void PlayFridgeOpen()
+    {
+        sound.PlayOneShot(audClips[15], .5f);
+
+    }
+
+    public void PlayFridgeClose()
+    {
+        sound.PlayOneShot(audClips[16], .5f);
+
+    }
+
+    public void PlayRodSplash()
+    {
+        sound.PlayOneShot(audClips[17], .5f);
+
+    }
+
+    public void PlayStore()
+    {
+        sound.PlayOneShot(audClips[17], .5f);
+
+    }
     
     //public void PlayRegister()
     //{

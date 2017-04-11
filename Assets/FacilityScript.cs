@@ -16,6 +16,7 @@ public class FacilityScript : MonoBehaviour {
     }
 
     Dictionary<Pair, float> points;
+    public SoundManager sm;
 
     // Use this for initialization
     void Start () {
@@ -60,6 +61,11 @@ public class FacilityScript : MonoBehaviour {
         {
             Debug.Log("Gain point : " + points[p]);
             Destroy(other.gameObject);
+            sm.PlayPositive();
+        }
+        else
+        {
+            sm.PlayNegative2();
         }
     }
 }

@@ -11,9 +11,10 @@ public class RefrigeratorScript : MonoBehaviour, IPointerClickHandler {
 	bool isOpen = false;
 
 	private ArrayList temp = new ArrayList();
+    public SoundManager sm;
 
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start () {
 
 	}
 
@@ -26,7 +27,8 @@ public class RefrigeratorScript : MonoBehaviour, IPointerClickHandler {
 	{
 		if (isOpen) {
 			isOpen = false;
-			gameObject.GetComponent<SpriteRenderer> ().sprite = close;
+            sm.PlayFridgeClose();
+            gameObject.GetComponent<SpriteRenderer> ().sprite = close;
 
 			foreach(GameObject g in transform.GetComponentInChildren<StorageScript>().things) {
 				temp.Add (g);
@@ -38,17 +40,16 @@ public class RefrigeratorScript : MonoBehaviour, IPointerClickHandler {
 				
 			transform.FindChild("storage").gameObject.SetActive(false);
 
-
 		} else {
-			// Debug.Log ("Open");
-			isOpen = true;
+            // Debug.Log ("Open");
+            sm.PlayFridgeOpen();
+            isOpen = true;
 			gameObject.GetComponent<SpriteRenderer> ().sprite = open;
 			transform.FindChild("storage").gameObject.SetActive(true);
 
 			foreach(GameObject g in temp) {
 				g.SetActive (true);
 			}
-
 			temp.Clear ();
 		}
 	}
