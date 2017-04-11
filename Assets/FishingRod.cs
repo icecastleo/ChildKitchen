@@ -94,6 +94,7 @@ public class FishingRod : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDr
                 Rigidbody2D rigid = fish.GetComponent<Rigidbody2D>();
 
                 rigid.AddForce(new Vector2(Random.Range(-5.0F, 3.0F), Random.Range(3.0F, 10.0F)) * rigid.mass * 30);
+				sm.PlaySplash ();
             }
         }
 

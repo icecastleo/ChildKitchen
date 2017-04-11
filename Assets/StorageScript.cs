@@ -25,8 +25,6 @@ public class StorageScript : MonoBehaviour {
 
         //Debug.Log("Trigger with " + other.transform.name.Split(null)[0]);
 
-        sm.PlayStore();
-
         Physics2D.IgnoreCollision(parent, other);
 		things.Add (other.gameObject);
 
@@ -35,6 +33,8 @@ public class StorageScript : MonoBehaviour {
 
         //other.transform.position = other.collider2D.
         //Destroy(other.gameObject);
+
+		sm.PlayClick ();
     }
 
     void OnTriggerExit2D(Collider2D other)

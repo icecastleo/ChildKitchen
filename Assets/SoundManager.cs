@@ -131,8 +131,7 @@ public class SoundManager : MonoBehaviour {
 
     public void PlayStore()
     {
-        sound.PlayOneShot(audClips[17], .5f);
-
+        //sound.PlayOneShot(audClips[18], .5f);
     }
     
     //public void PlayRegister()

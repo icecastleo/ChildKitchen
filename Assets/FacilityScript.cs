@@ -61,7 +61,12 @@ public class FacilityScript : MonoBehaviour {
         {
             Debug.Log("Gain point : " + points[p]);
             Destroy(other.gameObject);
-            sm.PlayPositive();
+
+			if (gameObject.name.StartsWith ("drawer")) {
+				sm.PlayNegative2 ();
+			} else {
+				sm.PlayPositive ();
+			}
         }
         else
         {
